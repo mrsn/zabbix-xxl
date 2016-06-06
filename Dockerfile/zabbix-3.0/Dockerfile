@@ -139,6 +139,7 @@ ENV \
   ZJ_LogLevel=error \
   ZJ_TCP_TIMEOUT=3000 \
   ZP_LogType=console \
+  ZP_Hostname="Zabbix proxy" \
   ZP_DBHost=zabbixproxy.db \
   ZP_DBName=zabbix \ 	
   ZP_DBUser=zabbix \

@@ -317,7 +317,11 @@ else
     FZP_DBName=$(grep ^DBName= /etc/custom-config/zabbix_proxy.conf | awk -F= '{print $2}')
     if [ ! -z "$FZP_DBName" ]; then
       export ZP_DBName=$FZP_DBName
-    fi    
+    fi
+    FZP_Hostname=$(grep ^DBName= /etc/custom-config/zabbix_proxy.conf | awk -F= '{print $2}')
+    if [ ! -z "$FZP_Hostname" ]; then
+      export ZP_Hostname=$FZP_Hostname
+    fi
   else
     > /usr/local/etc/zabbix_proxy.conf
     for i in $( set -o posix ; set | grep ^ZP_ | grep -v '^ZP_enabled' | sort -rn ); do
