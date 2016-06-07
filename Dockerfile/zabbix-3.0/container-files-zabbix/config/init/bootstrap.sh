@@ -318,7 +318,7 @@ else
     if [ ! -z "$FZP_DBName" ]; then
       export ZP_DBName=$FZP_DBName
     fi
-    FZP_Hostname=$(grep ^DBName= /etc/custom-config/zabbix_proxy.conf | awk -F= '{print $2}')
+    FZP_Hostname=$(grep ^Hostname= /etc/custom-config/zabbix_proxy.conf | awk -F= '{print $2}')
     if [ ! -z "$FZP_Hostname" ]; then
       export ZP_Hostname=$FZP_Hostname
     fi
